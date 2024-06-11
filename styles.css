@@ -35,9 +35,13 @@
  }
 
  nav{
-    max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(255, 255, 226);
  }
 
  .links{
@@ -170,6 +174,13 @@ max-width: 400px;
 outline: 2px solid var(--text-light);
 outline-offset: 1rem;
  }
+ .main{
+    padding:  10rem 0;
+    background-image: url("assets/message1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
 
 .banner{
     padding:  10rem 0;
@@ -177,13 +188,6 @@ outline-offset: 1rem;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-.main{
-   padding:  10rem 0;
-   background-image: url("assets/message1.jpg");
-   background-position: center center;
-   background-size: cover;
-   background-repeat: no-repeat;
 }
 
 .banner_container{
@@ -315,123 +319,71 @@ outline-offset: 1rem;
     color: var(--text-light);
 }
 
-.about_page {
+
+
+.aboutUs {
    display: flex;
-   flex-direction: row;
-}
-
-.about_text {
-   flex: 1;
-   padding: 30px;
-   font-size: 2rem;
-   color: var(--text-dark);
-   margin-top: 7rem;
-   max-width: 900px;
-}
-
-.about_img {
-   flex: 1;
-   display: flex;
-   justify-content: flex-end;
-   height: 60rem;
-}
-
-.about_img img {
-   max-width: 100%;
-   height: auto;
-}
-
-.description1 {
-   width: 500px; 
-   height: 500px; 
-   background-color: #f0f0f0;
-   border-radius: 50%;
-   padding: 20px;
-   text-align: center; 
-   margin-top: -50rem; 
-   margin-left:10px ;
-   float: left; 
-}
-
-
-
-.description1 h4,
-.description1 p {
-   font-size: 20px;
-   margin-top: 40px; 
-}
-
-.description2{
-   width: 500px; 
-   height: 500px; 
-   background-color: #f0f0f0;
-   border-radius: 50%;
-   padding: 20px;
-   text-align: center; 
-   margin-top: -50rem; 
-   margin-right:50px;
-   float: left; 
-}
-
-
-
-.description2 h4,
-.description2 p {
-   font-size: 20px;
-   margin-top: 40px; 
-}
-
-section.aboutUs {
-   display: flex;
-   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   padding: 50px;
-   max-width: 1500px; 
-   margin-left: 50rem;
-}
-
-section.aboutUs img {
-   max-width: 50%;
-   height: auto;
-   margin-right: 20px;
-}
-
-section.aboutUs .content {
-   max-width: 50%;
-}
-
-section.aboutUs h2 {
-   font-size: 40px;
-   color: #333;
-   margin-bottom: 20px;
-}
-
-section.aboutUs h4 {
-   font-size: 25px;
-   color: #666;
-   margin-bottom: 20px;
-}
-
-
-
-section.aboutUs p {
-   font-size: 16px;
-   color: #666;
-   line-height: 1.6;
-}
-
-.section {
-   min-height: 100vh;
-   width: 100%;
-  background-image: url(assets/about2.jpg);
-  background-position: center center;
-     background-size: cover;
-     background-repeat: no-repeat;
+   padding: 100px 50px; /* Added top padding to prevent collapsing into nav-bar */
+   background-color: #f9f9f9;
+ }
+ 
+ .content {
    display: flex;
    align-items: center;
    justify-content: center;
  }
+ 
+ .circle {
+   background-color: #fff;
+   border-radius: 50%;
+   padding: 40px 20px; /* Added padding to prevent text overflow */
+   width: 300px;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 20px;
+   text-align: center;
+   overflow: hidden; 
+ }
+ 
+ .circle h4 {
+   margin-bottom: 10px;
+   font-size: 1.5em;
+ }
+ 
+ .circle p {
+   font-size: 1em;
+   line-height: 1.5;
+   color: #333;
+   
+ }
+ 
+ .about-image {
+   max-width: 400px;
+   height: auto;
+   margin: 0 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ @media (max-width: 900px) {
+   .content {
+     flex-direction: column;
+   }
+ 
+   .about-image {
+     max-width: 100%;
+     margin: 20px 0;
+   }
+ }
+
+
+
  .container {
    max-width: 1100px;
    width: 100%;
